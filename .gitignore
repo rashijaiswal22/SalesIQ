@@ -1,0 +1,8 @@
+backend/.env
+backend/data/predictions.csv
+backend/__pycache__/
+backend/venv
+.venv/
+*.pyc
+node_modules/
+.vscode/
