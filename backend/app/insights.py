@@ -68,7 +68,7 @@ def generate_business_insights(historical_sample, forecast_data, metrics=None, i
         - Draft a 1-line promotional SMS with a CTA.
         """
         fallback_text = (
-            "### 📢 Marketing & Promo Campaign *(Offline Mode)*\n\n"
+            "### 📢 Marketing & Promo Campaign \n\n"
             "* 📧 **Email Idea:** 'Unbeatable Deals This Week! Get up to 20% off on top-rated products.'\n"
             "* 📱 **SMS CTA:** 'Flash Sale Alert! Use code SALES20 today at checkout. Shop now!'\n"
             "* 🎯 **Target Audience:** Re-engage recent visitors with weekend discount alerts."
@@ -83,7 +83,7 @@ def generate_business_insights(historical_sample, forecast_data, metrics=None, i
         3. 💰 Quick Revenue Tip
         """
         fallback_text = (
-            "### 📊 Business Intelligence Brief *(Offline Mode)*\n\n"
+            "### 📊 Business Intelligence Brief \n\n"
             "* 📈 **Forecast Trend:** Stable demand momentum predicted for the upcoming cycle.\n"
             "* 📦 **Quick Stock Action:** Keep safety buffer aligned with high-volume sales days.\n"
             "* 💰 **Quick Revenue Tip:** Run flash discounts during low-demand time slots."
@@ -152,7 +152,7 @@ def generate_general_chat_response(query):
         return {
             "insights": (
                 "⚠️ **Network Connection Issue**\n\n"
-                "* 🌐 **Status:** Unable to connect to Google GenAI servers.\n"
+                "* 🌐 **Status:** Unable to connect to with the server.\n"
                 "* 🔧 **Fix:** Please check your internet connection or turn off active VPNs.\n"
                 f"* 🛠️ **Technical Log:** `{str(e)}`"
             )
