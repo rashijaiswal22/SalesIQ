@@ -8,7 +8,7 @@ import {
   Bot, User, Send, TrendingUp, Sparkles, BarChart2, Package, ShieldAlert, DollarSign, Calendar, Megaphone
 } from 'lucide-react';
 
-const API_BASE = "http://127.0.0.1:8000/api";
+API_BASE = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000/api";
 
 export default function App() {
   const [messages, setMessages] = useState([
