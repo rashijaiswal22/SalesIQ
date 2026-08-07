@@ -20,6 +20,10 @@ app.add_middleware(
 def read_root():
     return {"message": "SalesIQ Machine Learning API is active!"}
 
+@app.get("/api")
+def api_root():
+    return {"status": "SalesIQ API sub-routes are ready. Use /api/forecast or /api/insights."}
+
 @app.get("/api/historical-sales")
 def get_historical_sales():
     return {"data": load_sales_data()}
