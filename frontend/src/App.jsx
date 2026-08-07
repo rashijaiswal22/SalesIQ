@@ -9,15 +9,13 @@ import {
 } from 'lucide-react';
 
 
-const LIVE_BACKEND_URL = "https://salesiq-backend-2pkb.onrender.com/api";
-const API_BASE = process.env.REACT_APP_API_URL || LIVE_BACKEND_URL;
+const API_BASE = "https://salesiq-backend-2pkb.onrender.com/api";
 
 // Axios Timeout Config
 const apiCall = axios.create({
   baseURL: API_BASE,
   timeout: 120000 
 });
-
 
 export default function App() {
   const [messages, setMessages] = useState([
@@ -77,7 +75,7 @@ export default function App() {
 
       // 1. Demand Forecast Queries
       if (lowerText.includes("forecast") || lowerText.includes("sales") || lowerText.includes("trend")) {
-        const resForecast = await axios.get(`${API_BASE}/forecast?days=${days}`);
+        const resForecast = await apiCall.get(`/forecast?days=${days}`);
         const forecastData = resForecast.data.forecast || [];
         
         if (resForecast.data.metrics) {
