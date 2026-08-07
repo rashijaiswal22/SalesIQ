@@ -8,7 +8,16 @@ import {
   Bot, User, Send, TrendingUp, Sparkles, BarChart2, Package, ShieldAlert, DollarSign, Calendar, Megaphone
 } from 'lucide-react';
 
-const API_BASE = "https://salesiq-backend-2pkb.onrender.com/api";
+
+const LIVE_BACKEND_URL = "https://salesiq-backend-2pkb.onrender.com/api";
+const API_BASE = process.env.REACT_APP_API_URL || LIVE_BACKEND_URL;
+
+// Axios Timeout Config
+const apiCall = axios.create({
+  baseURL: API_BASE,
+  timeout: 120000 
+});
+
 
 export default function App() {
   const [messages, setMessages] = useState([
@@ -25,7 +34,7 @@ export default function App() {
   const chatEndRef = useRef(null);
 
   useEffect(() => {
-    axios.get(`${API_BASE}/forecast?days=7`)
+    apiCall.get('/forecast?days=7')
       .then(res => {
         if (res.data && res.data.metrics) {
           const r2Val = res.data.metrics.r2_score;
@@ -106,7 +115,7 @@ export default function App() {
           queryType = "marketing";
         }
 
-        const resInsights = await axios.get(`${API_BASE}/insights?type=${queryType}`);
+        const resInsights = await apiCall.get(`/insights?type=${queryType}`);
         const botReply = {
           id: Date.now() + 1,
           sender: 'assistant',
@@ -117,7 +126,7 @@ export default function App() {
 
       // 3. Open Q&A General Chat
       } else {
-        const resChat = await axios.get(`${API_BASE}/chat?query=${encodeURIComponent(textToSend)}`);
+        const resChat = await apiCall.get(`/chat?query=${encodeURIComponent(textToSend)}`);
         const botReply = {
           id: Date.now() + 1,
           sender: 'assistant',
@@ -168,7 +177,7 @@ export default function App() {
           </button>
           <button className="prompt-chip" onClick={() => handleSend("Give revenue optimization strategy")}>
             <DollarSign size={16} /> Revenue Strategy
-          </button>
+          </button> 
           <button className="prompt-chip" onClick={() => handleSend("Check business risk and overstock warnings")}>
             <ShieldAlert size={16} /> Risk & Overstock Alert
           </button>
