@@ -94,7 +94,7 @@ SalesIQ integrates the Google Gemini API through the FastAPI backend to deliver 
 
 ### 1. Repository Clone
 ```bash
-git clone [https://github.com/your-username/SalesIQ.git](https://github.com/your-username/SalesIQ.git)
+git clone https://github.com/your-username/SalesIQ.git
 cd SalesIQ
 ```
 ### 2. Backend Setup
@@ -113,8 +113,8 @@ cd ../frontend
 npm install
 npm start
 ```
-**Frontend:** http://localhost:3000
-**Backend API Docs:** http://localhost:8000/docs
+* **Frontend:** http://localhost:3000
+* **Backend API Docs:** http://localhost:8000/docs
 
 ##🐳 Docker Deployment Guide
 Build & Run Container Images
@@ -134,8 +134,8 @@ docker run -p 80:80 salesiq-frontend
 ```
 
 ##🔗 Production Links
-🌐 Live Frontend Web App: https://salesiq-oyey.onrender.com
-⚡ Live Backend REST API: https://salesiq-backend-2pkb.onrender.com
+-🌐 Live Frontend Web App: https://salesiq-oyey.onrender.com
+-⚡ Live Backend REST API: https://salesiq-backend-2pkb.onrender.com
 
 ## 📊 Model Evaluation
 The forecasting model performance is evaluated using:
