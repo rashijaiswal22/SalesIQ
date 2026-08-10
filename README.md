@@ -15,8 +15,6 @@ SalesIQ is an end-to-end AI/ML business intelligence platform designed to delive
 * 📏 **Model Evaluation:** Real-time tracking of MAE and R² metrics for forecast performance.
 * 🐳 **Dockerized Deployment:** Fully containerized microservices architecture ready for cloud production.
 
----
-
 ## 🛠️ Tech Stack & Architecture
 
 * **Frontend:** React.js, Recharts, Lucide Icons, React Markdown, Axios
@@ -25,7 +23,6 @@ SalesIQ is an end-to-end AI/ML business intelligence platform designed to delive
 * **Containerization & Cloud:** Docker, Docker Hub, Render 
 * **Generative AI:** Google gemini API(google-genai / gemini-2.0-flash)
 
----
 ## 📸 App Screenshots & Architecture
 
 Explore the UI workspace and core modules:
@@ -41,7 +38,7 @@ Explore the UI workspace and core modules:
 ### 3. AI Strategic Insights & Risk Alerts
 ![AI Insights](./img/salesiq_insights.png)
 
----
+
 ## 🧠 Machine Learning Pipeline
 
 SalesIQ uses a **Random Forest Regressor** for sales forecasting. The end-to-end data pipeline includes:
@@ -53,7 +50,7 @@ SalesIQ uses a **Random Forest Regressor** for sales forecasting. The end-to-end
 5. **Model Training & Forecasting:** Multi-step forecasting for 7, 14, and 30-day horizons.
 6. **Model Evaluation:** Automated validation tracking MAE and R² metrics.
 
----
+
 ## 🤖 Generative AI Integration
 
 SalesIQ integrates the Google Gemini API through the FastAPI backend to deliver intelligent business recommendations, including:
@@ -63,8 +60,6 @@ SalesIQ integrates the Google Gemini API through the FastAPI backend to deliver 
 * 💰 Revenue optimization strategies & dynamic pricing tips
 * 📢 Email & SMS promotional campaign ideas
 * 📊 Natural-language explanations of complex sales trends
-
----
 
 ## 🏗️ System Architecture
 
