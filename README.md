@@ -3,7 +3,6 @@
 SalesIQ is an end-to-end AI/ML business intelligence platform designed to deliver real-time demand forecasts, automated inventory optimization, and strategic growth recommendations using predictive ML models and GenAI capability.
 
 🔗 **Live Demo:** [SalesIQ Web App](https://salesiq-oyey.onrender.com)
----
 
 ## 🚀 Key Features
 
