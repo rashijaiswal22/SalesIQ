@@ -152,7 +152,7 @@ export default function App() {
       <div className="sidebar">
         <div className="brand">
           <Sparkles className="w-6 h-6 text-sky-400" />
-          <span>SalesIQ Copilot</span>
+          <span> SalesIQ Copilot </span>
         </div>
 
         <div className="sidebar-section">
@@ -182,7 +182,7 @@ export default function App() {
           <button className="prompt-chip" onClick={() => handleSend("Generate marketing promo email and SMS")}>
             <Megaphone size={16} /> Marketing Campaign
           </button>
-        </div>
+        </div> 
 
         <div className="sidebar-section" style={{ marginTop: 'auto' }}>
           <div className="sidebar-title">System Accuracy Stats</div>
